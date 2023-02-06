@@ -11,11 +11,12 @@ public interface DataAccessObject<TData> {
     // Update
     // Delete
 
-    Boolean create(TData newObject);
+    Boolean create(TData newItem);
+
     Optional<TData> read(Integer id);
     List<TData> read();
-    Boolean update(Integer id, TData updatedObject);
+    Boolean update(Integer id, TData updatedItem);
     Boolean delete(Integer id);
-    Boolean delete(TData objectToDelete);
+    Boolean delete(TData itemToDelete);
 }
 
